@@ -1,0 +1,11 @@
+# ============== Core Settings ==============
+* text=auto eol=lf  # Applies to ALL text files
+
+# ============== Lockfiles ==============
+package-lock.json text eol=lf
+pnpm-lock.yaml    text eol=lf
+yarn.lock         text eol=lf
+
+# ============== Source Files ==============
+*.js  text diff=javascript
+*.ts  text diff=typescript
