@@ -1,0 +1,21 @@
+{
+  "name": "promptrix",
+  "packageManager": "pnpm@8.6.5",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "start": "node examples/basic.js",
+    "core": "cd packages/core && npm run dev",
+    "test": "cd packages/core && node test/index.js",
+    "clean": "turbo clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.4",
+    "typescript": "^5.4.5"
+  }
+}
