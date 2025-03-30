@@ -9,7 +9,7 @@
 </blockquote>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/@promptrix/core-0.2.0-red" alt="npm version">
+  <img src="https://img.shields.io/badge/@promptrix/core-0.1.1-red" alt="npm version">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
 </div>
 
