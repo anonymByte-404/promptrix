@@ -1,11 +1,13 @@
 {
   "name": "@promptrix/core",
   "type": "module",
-  "version": "0.1.0",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "version": "0.1.1",
+  "exports": {
+    "import": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
   "scripts": {
-    "build": "tsup src/index.ts --dts",
+    "build": "tsup src/index.ts --format esm --dts",
     "dev": "tsup src/index.ts --watch --dts",
     "clean": "rm -rf dist"
   },
