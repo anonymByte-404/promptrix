@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo build",
+    "build": "tsc --build",
     "dev": "turbo dev",
     "start": "node examples/basic.js",
     "core": "cd packages/core && npm run dev",
@@ -15,7 +15,11 @@
     "clean": "turbo clean && rm -rf node_modules"
   },
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "turbo": "^2.4.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@promptrix/core": "^0.1.1"
   }
 }
