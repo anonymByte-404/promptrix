@@ -4,25 +4,20 @@
 
 <h3 align="center">The TypeScript-Powered CLI Prompt Engine</h3>
 
-> [!NOTE]
-> Early Development Notice: Promptrix is currently in active development. 
-> Core functionality is stable, but APIs may evolve until v1.0 release.
-
+<blockquote>
+  <strong>Early Development Notice:</strong> Promptrix is currently in active development.
+</blockquote>
 
 <div align="center">
-  <a href="https://npmjs.com/package/@promptrix/core">
-    <img src="https://img.shields.io/npm/v/@promptrix/core?color=blue&logo=npm" alt="npm version">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
-  </a>
+  <img src="https://img.shields.io/badge/@promptrix/core-0.2.0-red" alt="npm version">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
 </div>
 
 <h2>🚀 Features</h2>
 <ul>
-  <li><strong>TypeSafe:</strong> Full TypeScript support</li>
-  <li><strong>Modular:</strong> Use only what you need</li>
-  <li><strong>Cross-Platform:</strong> Works on Windows/macOS/Linux</li>
+  <li><strong>TypeSafe:</strong> Full TypeScript support.</li>
+  <li><strong>Modular:</strong> Use only what you need.</li>
+  <li><strong>Cross-Platform:</strong> Works on Windows, macOS, and Linux.</li>
 </ul>
 
 <h2>📦 Installation</h2>
@@ -33,27 +28,33 @@ pnpm add @promptrix/core
 yarn add @promptrix/core</code></pre>
 
 <h2>💻 Basic Usage</h2>
-<pre><code class="language-typescript">import { textPrompt } from '@promptrix/core';
 
-const name = await textPrompt({
-  message: "What's your name?",
-  validate: input => input ? true : "Name required"
-});</code></pre>
+```ts
+import { textPrompt } from '@promptrix/core'
+
+(async () => {
+  const name: string = await textPrompt({
+    message: "Enter your name:",
+    validate: (input: string) => input.length > 2 || "Minimum 3 characters"
+  })
+  console.log(`Hello, ${name}!`)
+})()
+```
 
 <h2>📂 Packages</h2>
-<table>
-  <tr>
-    <th>Package</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td><code>@promptrix/core</code></td>
-    <td>Base prompt engine</td>
-  </tr>
-  <tr>
-    <td><code>@promptrix/forms</code></td>
-    <td>Multi-prompt flows (WIP)</td>
-  </tr>
+<table style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #1e1e1e; color: #ffffff;">
+      <th style="padding: 12px; border: 1px solid #444444;">Package</th>
+      <th style="padding: 12px; border: 1px solid #444444;">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #444444;"><code>@promptrix/core</code></td>
+      <td style="padding: 12px; border: 1px solid #444444;">Base prompt engine.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2>📝 License</h2>
